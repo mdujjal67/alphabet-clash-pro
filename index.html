@@ -23,15 +23,15 @@
 <body>
     <main class="bg-[#1E1E1E] min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home section -->
-        <section class="home hidden">
+        <section id="home-section" class="">
             <div class="home-content flex flex-col text-center justify-center items-center min-h-screen">
                 <h1 class="home-title text-white anton text-[120px]">ALPHABET CLASH</h1>
                 <p class="home-content text-[#ffffffCC] poppins text-2xl">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-                <button class="btn btn-ghost bg-white hover:text-white mt-9">Play Now</button>
+                <button class="btn btn-ghost bg-white hover:text-white mt-9" onclick="play()">Play Now</button>
             </div>
         </section>
         <!-- playground section -->
-        <section class="playground">
+        <section id="playground-section" class=" hidden">
             <div>
                 <!-- art-board design -->
                 <div class="artboard flex flex-col text-center items-center">
@@ -78,26 +78,36 @@
                     </div>
                 </div>
                 <!-- keyboard end -->
-                <!--two button design -->
+                <!--button design -->
                 <div class="flex justify-center mt-10">
-                    <div class="two-button flex justify-between w-3/4 items-center">
+                    <div class="buttons flex justify-between w-3/4 items-center">
                         <button class="text-white bg-[#894189] hover:bg-[#360490] flex rounded-full py-3 px-7 gap-1">Life 
                             <img src="images/Group 23.svg" alt="heart-logo"> 
                             <span>1</span>
                         </button>
+                        <button class="btn px-7 rounded-full" onclick="goBack()">Go Back</button>
                         <button class="text-white bg-[#360490] hover:bg-[#894189] flex rounded-full py-3 px-7 gap-1">Score 
                             <img src="images/monetization_on.svg" alt="monetization-logo">
                             <span>1</span>
                         </button>
                     </div>
                 </div>
-            </div>
-            
+            </div>         
         </section>
         <!-- score section -->
-        <section class="score">
-
+        <section id="score-section" class=" min-h-screen flex justify-center items-center hidden">
+            <div class="score-content poppins bg-[#ffffff33] text-center p-10 rounded-2xl">
+                <h2 class="text-white text-6xl">
+                    <span class="font-extrabold">Score :</span>
+                    <span>14</span>
+                </h2>
+                <button class="btn text-2xl font-semibold px-5 my-5">Play Now</button>
+                <p class="score-text text-xl text-white">Practice will make you Pro</p>
+            </div>
         </section>
     </main>
+
+    <script src="utiity.js"></script>
+    <script src="alpha-clash.js"></script>
 </body>
 </html>
