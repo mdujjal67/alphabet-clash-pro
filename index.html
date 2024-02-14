@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/58b6a44110.js" crossorigin="anonymous"></script>
     <style>
         .poppins{
              font-family: "Poppins", sans-serif;
@@ -86,12 +88,12 @@
                     <div class="buttons flex justify-between w-3/4 items-center">
                         <button class="text-white bg-[#894189] hover:bg-[#360490] flex rounded-full py-3 px-7 gap-1">Life 
                             <img src="images/Group 23.svg" alt="heart-logo"> 
-                            <span>1</span>
+                            <span id="current-life" class="font-bold">5</span>
                         </button>
                         <button class="btn px-7 rounded-full" onclick="goBack()">Go Back</button>
                         <button class="text-white bg-[#360490] hover:bg-[#894189] flex rounded-full py-3 px-7 gap-1">Score 
                             <img src="images/monetization_on.svg" alt="monetization-logo">
-                            <span>1</span>
+                            <span id="current-score" class="font-bold">0</span>
                         </button>
                     </div>
                 </div>
@@ -100,12 +102,13 @@
         <!-- score section -->
         <section id="score-section" class=" min-h-screen flex justify-center items-center hidden">
             <div class="score-content poppins bg-[#ffffff33] text-center p-10 rounded-2xl">
+                <h4 class="game-over text-2xl text-white">Game Over !</h4>
                 <h2 class="text-white text-6xl">
                     <span class="font-extrabold">Score :</span>
-                    <span>14</span>
+                    <span id="game-score">14</span>
                 </h2>
-                <button class="btn text-2xl font-semibold px-5 my-5">Play Now</button>
-                <p class="score-text text-xl text-white">Practice will make you Pro</p>
+                <button class="btn text-xl font-semibold px-3 my-8" onclick="play()">Play Again</button>
+                <p class="score-text text-xl text-white">Practice will make you Pro <i class="fa-regular fa-thumbs-up fa-fw"></i></p>
             </div>
         </section>
     </main>
