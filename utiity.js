@@ -18,7 +18,7 @@ function setBackgroundColorById(elementId){
 }
 
 // common function for remove key background
-function setBackgroundColorById(elementId){
+function removeBackgroundColorById(elementId){
     const element = document.getElementById(elementId);
-    element.classList.remove('bg-orange-400')
+    element.classList.remove('bg-orange-400');
 }
