@@ -33,3 +33,28 @@ function continueGame(){
     // set alphabet background color
     setBackgroundColorById(alphabet);
 }
+
+
+
+// function for keyboard press related events
+document.addEventListener('keyup', function handleKeyboardKeyUpEven(event){
+    const playerPressed = event.key;
+    console.log('player pressed' ,playerPressed);
+
+    // get expected to press
+    const currentAlphabetElement = document.getElementById('current-alphabet');
+    currentAlphabet = currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+    console.log(playerPressed, expectedAlphabet);
+
+    // check matched or not
+    if(playerPressed === expectedAlphabet){
+        console.log('you get a point');
+        removeBackgroundColorById(expectedAlphabet);
+        continueGame();
+    }
+    else{
+        console.log('you lost a life')
+    }
+
+});
